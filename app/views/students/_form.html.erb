@@ -11,16 +11,22 @@
 	     </div>
 	<% end %>
 
-	<%= f.label :name%>
-	<%= f.text_field :name, placeholder: "Student Name"%>
+  	<div class="field">
+		<%= f.label :name%>
+		<%= f.text_field :name, placeholder: "Student Name", class: "form-control"%>
+	</div>	
 	<br>
 
-	<%= f.label :student_number %>
-	<%= f.text_field :student_number, placeholder: "Student number"%>
+	<div class="field">
+		<%= f.label :student_number %>
+		<%= f.text_field :student_number, placeholder: "Student number", class: "form-control"%>
+	</div>
 	<br>
 
-	<%= f.label :faculty%>
-	<%= f.text_field :faculty, placeholder: "Faculty Name"%>
+  	<div class="field">
+		<%= f.label :faculty%>
+		<%= f.text_field :faculty, placeholder: "Faculty Name", class: "form-control"%>
+	</div>	
 	<br>
 
 	<%= f.submit %>
