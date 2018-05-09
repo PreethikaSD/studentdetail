@@ -1,0 +1,27 @@
+<%= form_for(@student) do |f| %>
+
+	<% if @student.errors.any? %>
+	     <div>
+	          <p><%= pluralize(@student.errors.count, "error") %> prevented this record from saving.</p>
+	          <ul>
+	               <% @student.errors.full_messages.each do |msg| %>
+	               <li><%= msg %></li>
+	               <% end %>
+	          </ul> 
+	     </div>
+	<% end %>
+
+	<%= f.label :name%>
+	<%= f.text_field :name, placeholder: "Student Name"%>
+	<br>
+
+	<%= f.label :student_number %>
+	<%= f.text_field :student_number, placeholder: "Student number"%>
+	<br>
+
+	<%= f.label :faculty%>
+	<%= f.text_field :faculty, placeholder: "Faculty Name"%>
+	<br>
+
+	<%= f.submit %>
+<%end%>
