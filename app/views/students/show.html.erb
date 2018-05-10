@@ -18,7 +18,10 @@
 		      </tr>
 		  </tbody>
 		</table>
-		<%= link_to 'Home', root_path %>
+		<p id="pdf_link">
+			<%= link_to 'Home', root_path %><br>	
+			<%= link_to "Download PDF", student_path(@student, :format => 'pdf'), target: "_blank" %>
+		</p>
 	</div>
 </div>
 

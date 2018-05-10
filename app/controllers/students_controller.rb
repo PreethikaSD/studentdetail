@@ -22,6 +22,9 @@ class StudentsController < ApplicationController
 	def edit
 	end
 
+	def show
+	end
+
 	def update
 		if @student.update(student_params)
 			redirect_to @student, notice: "Student record is updated successfully"
@@ -40,6 +43,7 @@ class StudentsController < ApplicationController
 	def student_params
 	     params.require(:student).permit(:name, :student_number, :faculty)
 	end
+
 	def find_student
 	     @student = Student.find(params[:id])
 	end
